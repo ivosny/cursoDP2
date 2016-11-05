@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+    
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <title>Dimencionamento de pessoal</title>
+    
+</head>
+
+<body>
+    <div class="container">
+        
+      <div class="panel panel-primary">
+          <div class="panel-heading"><h3 class="panel-title">Dimencionamento de pessoal  
+         </h3></div> 
+          <div class="panel-body">
+            <div class="list-group-item list-group-item-info ">
+               <div class="panel panel-primary">
+          <div class="panel-heading">Hora de enfermagem</div> </div>
+              <div class="tipo-assistencia">
+              <label for="1">Assistencia mínima: </label><input type="text" id="E-4" class="cf cx50 bggray"  value="3.8"><input name="btassistencia" id="1" type="radio" class="btradio">
+              <div class="btn btn-default bt-radio"><span class="glyphicon glyphicon-ok"></span></div>
+              </div>
+              <div class="tipo-assistencia">
+              <label for="1">Assistência intermediária: </label><input type="text" id="E-5" class="cf cx50 bggray" value="5.6"><input name="btassistencia" id="2" type="radio" class="btradio">
+              <div class="btn btn-default bt-radio"><span class="glyphicon glyphicon-ok"></span></div>
+              </div>
+              <div class="tipo-assistencia">
+              <label for="1">Assistência semi-intensiva: </label><input type="text" id="E-6" class="cf cx50 bggray" value="9.4"><input name="btassistencia" id="3" type="radio" class="btradio">
+              <div class="btn btn-default bt-radio"><span class="glyphicon glyphicon-ok"></span></div>
+              </div>
+              <div class="tipo-assistencia">
+              <label for="1">Assistência intensiva: </label><input type="text" id="E-7" class="cf cx50 bggray" value="17.9">
+              
+                <input name="btassistencia" id="4" type="radio" class="btradio" checked>
+              <div class="btn btn-default bt-radio btativo"><span class="glyphicon glyphicon-ok"></span></div>
+              </div>
+            </div>
+          
+            <div class="list-group-item list-group-item-info ">
+            
+            <table width="100%" cellpadding="0" cellspacing="0">
+              
+              
+              <tr>
+                <td>Nº de leitos ativos</td>
+                <td><input class="cx40" type="text" value="20" id="E-13"></td>
+              </tr>
+              <tr>
+                <td>Jornada de trabalho</td>
+                <td><input class="cx40" type="text" value="7" id="E-14"></td>
+              </tr>
+              <tr>
+                <td>Carga horária semanal</td>
+                <td><input class="cx40" type="text" value="36" id="E-15"></td>
+              </tr>
+              <tr>
+                <td>Taxa de ocupação (%)</td>
+                <td><input class="cx40" type="text" value="95" id="E-16"></td>
+              </tr>
+              <tr>
+                <td >Índice de segurança Técnica(%)</td>
+                <td ><input class="cx40" type="text" value="15" id="E-17" disabled></td>
+              </tr>
+               <tr>
+                 <td colspan="2" style=" text-align:center; border-top:solid 1px #CCC; padding-top:4px;"><button class="btn btn-success" id="btcalcular">Calcular</button>
+                 </td>
+              </tr>
+              </table>
+            </div>
+            
+            
+            <div class="panel panel-primary">
+          <div class="panel-heading"><div>Total de Colaboradores de Enfermagem  <span id="K-15" class="badge" style="margin-left:30px;">17</span></div></div>
+            <div class="list-group-item list-group-item-info ">
+        <ul class="list-group">
+            <li class="list-group-item">
+            <span id="N-15" class="badge">10</span>
+            Enfermeiros
+            </li>
+            <li class="list-group-item">
+            <span id="N-17" class="badge">7</span>
+            Técnicos e auxiliares
+            </li>
+        </ul>
+            </div>
+            </div>
+            
+            
+            
+            
+          
+        </div>
+        </div>
+       
+    </div>
+      <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+		 // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // Cordova is ready
+    //
+   
+    }
+		$(document).ready(function(e){
+		$('.cf').attr("disabled", true);
+		
+		//Declarando variaveis de inicialização 
+		var F11=17.9;
+		var E11=4;
+		function calcular(){
+			
+		var E13=$('#E-13').val();
+		var E14=$('#E-14').val();
+		var E15=$('#E-15').val();
+		var E16=$('#E-16').val();
+		var E17=$('#E-17').val();
+		var H10=(F11*E13*E14)/E15;
+		var I7=H10*E17/100
+		var K15=Math.round((H10+I7)*E16/100);
+		var R7=(K15*67)/100;
+		var R8=(K15*52)/100;
+		var R9=(K15*42)/100;
+			
+		if(E11==1){
+			N17=Math.round(R7);
+			//alert(N17);
+				}else if(E11==2){N17=Math.round(R7);
+					//alert(N17);
+				}else if(E11==3){N17=Math.round(R8);
+					//alert(N17);
+				}else if(E11==4){N17=Math.round(R9);
+					//alert(N17);
+				}
+					
+			//alert(N17);
+			var N15=K15-N17
+			
+			$('#K-15').html(Math.round(K15));
+			$('#N-15').html(Math.round(N15));
+			$('#N-17').html(Math.round(N17));
+		}	
+			calcular();
+		//alert (Math.round(N17));
+		//alert(va+1.1);
+        app.initialize();
+		$('.btradio').click(function(e) {
+			F11=$(this).prev('input').val();
+			E11=$(this).attr('id');
+          
+			calcular();
+			//alert('Valor base = '+E11);
+        });
+		$('.bt-radio').click(function(e){
+			//alert($(this).prev('input').attr('id'));
+			$('.bt-radio').removeClass('btativo');
+			$(this).addClass('btativo');
+			$(this).prev('input').click();
+			
+		})
+		//-------------------------------------------------
+			
+			$('#btcalcular').click(function(e){
+				//alert(F11+' - '+E11);
+				calcular();
+			})
+			
+	function exitFromApp(){
+   navigator.app.exitApp()
+}
+		})
+	
+		$('.bt-exit').click(function(){
+			//aApplication.Current.Terminate();to windows
+			 console.log("Fechando Aplicação");
+   			navigator.app.exitApp();
+		})
+    </script>
+</body>
+
+</html>
